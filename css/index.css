@@ -1,0 +1,1109 @@
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  color: white;
+  font-family: Tahoma, sans-serif;
+  font-size: 40px;
+  user-select: none;
+}
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+body {
+  font-family: Tahoma;
+  background: url('../image/3.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.disclaimer {
+  justify-content: center;
+  text-align: center;
+  color: black;
+  background-color: white;
+  margin-bottom: 10px;
+  max-width: 800px;
+}
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: transparent;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.3),
+    0 10px 10px rgba(0, 0, 0, 0.1),
+    inset 0 0 10px rgba(78, 76, 76, 0.3);
+  transform: rotateX(1deg) rotateY(-1deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.container:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 10px 15px rgba(0, 0, 0, 0.2),
+    inset 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: purple;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.radio-group {
+  margin-top: 10px;
+}
+
+.radio-group label {
+  font-weight: normal;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+button {
+  font-family: Tahoma;
+  margin-top: 20px;
+  background-color: white;
+  color: purple;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: rgb(77, 1, 77);
+  color: white;
+}
+
+/* Modal Popup Styling */
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  display: none;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.popup h3 {
+  font-size: 24px;
+  color: rgb(129, 5, 129);
+  margin-bottom: 10px;
+}
+.popup p {
+  font-size: 16px;
+  color: #1f1d1d;
+}
+.popup button {
+  margin-top: 20px;
+  background-color: rgb(129, 5, 129);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: rgb(77, 1, 77);
+  color: white;
+}
+
+/* iPad Pro 12.9" Portrait (1024px) */
+@media (max-width: 1024px) and (min-height: 1366px) {
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: -120px !important;
+    margin-bottom: 50px;
+    max-width: 800px;
+  }
+}
+/* Keep your original CSS here */
+/* iPad Pro 11" Portrait */
+@media (max-width: 834px) and (orientation: portrait) {
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: -150px !important;
+    margin-bottom: 50px;
+    max-width: 700px;
+  }
+}
+
+/* 📱 iPhone 14 Pro Max */
+@media only screen 
+  and (device-width: 430px) 
+  and (device-height: 932px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: -100px !important;
+    margin-bottom: 30px;
+    max-width: 350px;
+  }
+  .container {
+    max-width: 350px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 10px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: larger !important;
+    font-weight: 700;
+    text-align: center;
+    color: purple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 40px !important;
+  }
+
+  .radio-group {
+    margin-top: 5px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  button {
+    font-family: Tahoma;
+    margin-top: 20px;
+    background-color: white;
+    color: purple;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: small !important;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }
+
+  /* Modal Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .popup h3 {
+    font-size: 24px;
+    color: rgb(129, 5, 129);
+    margin-bottom: 10px;
+  }
+  .popup p {
+    font-size: 16px;
+    color: #1f1d1d;
+  }
+  .popup button {
+    margin-top: 20px;
+    background-color: rgb(129, 5, 129);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }  
+}
+
+/* 📱 iPhone 12 Pro */
+@media only screen 
+  and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: -70px !important;
+    margin-bottom: 30px;
+    max-width: 350px;
+  }
+  .container {
+    max-width: 350px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 10px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: larger !important;
+    font-weight: 700;
+    text-align: center;
+    color: purple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 40px !important;
+  }
+
+  .radio-group {
+    margin-top: 5px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  button {
+    font-family: Tahoma;
+    margin-top: 20px;
+    background-color: white;
+    color: purple;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: small !important;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }
+
+  /* Modal Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .popup h3 {
+    font-size: 24px;
+    color: rgb(129, 5, 129);
+    margin-bottom: 10px;
+  }
+  .popup p {
+    font-size: 16px;
+    color: #1f1d1d;
+  }
+  .popup button {
+    margin-top: 20px;
+    background-color: rgb(129, 5, 129);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }  
+}
+
+@media (max-width: 576px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: -70px !important;
+    margin-bottom: 30px;
+    max-width: 350px;
+  }
+  .container {
+    max-width: 350px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 10px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: xx-large !important;
+    font-weight: 700;
+    text-align: center;
+    color: purple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 40px !important;
+  }
+
+  .radio-group {
+    margin-top: 5px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  button {
+    font-family: Tahoma;
+    margin-top: 20px;
+    background-color: white;
+    color: purple;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: small !important;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }
+
+  /* Modal Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .popup h3 {
+    font-size: 24px;
+    color: rgb(129, 5, 129);
+    margin-bottom: 10px;
+  }
+  .popup p {
+    font-size: 16px;
+    color: #1f1d1d;
+  }
+  .popup button {
+    margin-top: 20px;
+    background-color: rgb(129, 5, 129);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }  
+}
+
+@media (max-width: 540px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: 20px !important;
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
+  .container {
+    max-width: 350px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+  }
+
+  .container:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 10px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: xx-large !important;
+    font-weight: 700;
+    text-align: center;
+    color: purple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 40px !important;
+  }
+
+  .radio-group {
+    margin-top: 5px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  button {
+    font-family: Tahoma;
+    margin-top: 20px;
+    background-color: white;
+    color: purple;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: small !important;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }
+
+  /* Modal Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .popup h3 {
+    font-size: 24px;
+    color: rgb(129, 5, 129);
+    margin-bottom: 10px;
+  }
+  .popup p {
+    font-size: 16px;
+    color: #1f1d1d;
+  }
+  .popup button {
+    margin-top: 20px;
+    background-color: rgb(129, 5, 129);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }  
+}
+
+@media (max-width: 400px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+    max-width: 340px;
+  }
+  .container {
+    max-width: 350px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .container:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.3),
+      0 10px 15px rgba(0, 0, 0, 0.2),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+
+  h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: xx-large !important;
+    font-weight: 700;
+    text-align: center;
+    color: purple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    resize: vertical;
+    height: 40px !important;
+  }
+
+  .radio-group {
+    margin-top: 5px;
+  }
+
+  .radio-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 15px;
+  }
+
+  button {
+    font-family: Tahoma;
+    margin-top: 20px;
+    background-color: white;
+    color: purple;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: small !important;
+    font-weight: 700;
+  }
+
+  button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }
+
+  /* Modal Popup Styling */
+  .popup {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    display: none;
+  }
+
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  .popup h3 {
+    font-size: 24px;
+    color: rgb(129, 5, 129);
+    margin-bottom: 10px;
+  }
+  .popup p {
+    font-size: 16px;
+    color: #1f1d1d;
+  }
+  .popup button {
+    margin-top: 20px;
+    background-color: rgb(129, 5, 129);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .popup button:hover {
+    background-color: rgb(77, 1, 77);
+    color: white;
+  }  
+}
+
+@media (max-width: 360px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+    max-width: 300px;
+  }
+  .container {
+    max-width: 300px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 250px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+}
+ 
+@media (max-width: 320px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .disclaimer {
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+    max-width: 250px;
+  }
+  .container {
+    max-width: 270px;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow:
+      0 2px 6px rgba(0, 0, 0, 0.3),
+      0 10px 10px rgba(0, 0, 0, 0.1),
+      inset 0 0 10px rgba(78, 76, 76, 0.3);
+    transform: rotateX(1deg) rotateY(-1deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+    h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6rem !important;
+    font-weight: 700;
+    text-align: center;
+    color: purple;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+  }
+  .popup-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 250px;
+    width: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration Form Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <!-- PRELOADER -->
+  <div id="preloader" class="text-center py-3">
+    Loading...
+  </div>
+  <div class="main-content col-12">
+    <div class="disclaimer col-10 col-sm-8 col-md-6 col-lg-4 mx-auto text-center">⚠️ "Please note that the links on this page direct to 
+      demonstration  projects intended for educational and portfolio purposes  only.  
+      They are not affiliated with or endorsed by any actual companies."
+    </div>
+    <div class="container">
+      <h2>Event Registration Design</h2>
+      <form id="registrationForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="event">Choose Event</label>
+        <select id="event" name="event" required>
+          <option value="">-- Select an Event --</option>
+          <option value="workshop">Web Development Workshop</option>
+          <option value="seminar">Tech Trends Seminar</option>
+          <option value="networking">Networking Meetup</option>
+        </select>
+
+        <fieldset class="radio-group">
+          <legend>Attendance Type</legend>
+          <label><input type="radio" name="attendance" value="in-person" required> In-person</label>
+          <label><input type="radio" name="attendance" value="online"> Online</label>
+        </fieldset>
+
+        <label for="requirements">Special Requirements</label>
+        <textarea id="requirements" name="requirements" placeholder="Let us know if you have any special needs..."></textarea>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ✅ Thank You Modal -->
+  <div class="popup" id="thankYouPopup" role="dialog" aria-modal="true">
+    <div class="popup-content">
+      <h3>🎉 Thank You!</h3>
+      <p>Your registration has been received.</p>
+      <button onclick="closePopup()">Close</button>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>
